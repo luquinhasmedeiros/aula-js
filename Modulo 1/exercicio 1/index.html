@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,31 @@
 
     <title>Modulo 1\Ex1</title>
 </head>
+
 <body>
     <script>
-           var endereco = {
-        rua: "Rua dos pinheiros",
-        numero: 1293,
-        bairro: "Centro",
-        cidade: "São Paulo",
-        uf: "SP"
-    };
+        function formataEndereco(endereco) {
+            return "O usuário mora em "
+                + endereco.cidade +
+                "/" + endereco.uf +
+                   " no bairro  " +
+                endereco.bairro   +
+                ", na rua "       +
+                endereco.rua      +
+                ", de n° "        +
+                endereco.numero
+        }
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
 
-    alert("O usuário mora em " + endereco.cidade + "/" +endereco.uf  " no bairro  " + endereco.bairro +", na rua " + endereco.rua + ", de n° " + endereco.numero)
-    
+        document.write(formataEndereco(endereco))
+
     </script>
 </body>
+
 </html>
